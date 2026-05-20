@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+boto3
+PyMuPDF
+opencv-python-headless
+firebase-admin
+python-multipart
+pillow
