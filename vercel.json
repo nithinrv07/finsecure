@@ -1,6 +1,7 @@
 {
   "version": 2,
   "routes": [
+    { "handle": "filesystem" },
     { "src": "/_/backend/(.*)", "dest": "/backend/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
