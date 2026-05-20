@@ -146,6 +146,7 @@ export default function App() {
   const [alertFilter, setAlertFilter] = useState('all')
 
   const fileInputRef = React.useRef(null)
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
   useEffect(() => {
     const alertsRef = ref(db, 'alerts')
@@ -209,7 +210,7 @@ export default function App() {
     const form = new FormData()
     form.append('file', file)
 
-    fetch('http://localhost:8000/scan', {
+    fetch(`${API_URL}/scan`, {
       method: 'POST',
       body: form,
     }).then(async (res) => {
